@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Contact Us</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><strong>Barq</strong> Consing</a>
+
+					<ul class="icons">
+						<li>
+							<a href="https://www.facebook.com/profile.php?id=61583837812426"
+								class="icon brands fa-facebook-f" target="_blank" rel="noopener">
+								<span class="label">Facebook</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="https://www.instagram.com/barq_consign?igsh=N2R2cjU5d3E2dnVz&utm_source=qr"
+								class="icon brands fa-instagram" target="_blank" rel="noopener">
+								<span class="label">Instagram</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="mailto:barqconsignment@gmail.com" class="icon brands fa-google" target="_blank"
+								rel="noopener">
+								<span class="label">Gmail</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="https://wa.me/918459680628" class="icon brands fa-whatsapp" target="_blank"
+								rel="noopener">
+								<span class="label">WhatsApp</span>
+							</a>
+						</li>
+					</ul>
+
+				</header>
+
+				<!-- Content -->
+				<section>
+					<header class="main">
+						<h1>Contact Us</h1>
+					</header>
+					<div class="image main">
+						<div class="map-container">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d312.55102198537304!2d79.05390959183663!3d21.184900266391153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1a34590138d%3A0xe93887bfe92f4b77!2sNew%20Ahbab%20Colony%2C%206%2C%20Mahesh%20Nagar%2C%20Anant%20Nagar%2C%20Nagpur%2C%20Maharashtra%20440013!5e0!3m2!1sen!2sin!4v1764089346714!5m2!1sen!2sin"
+								allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+							</iframe>
+						</div>
+					</div>
+
+					<div class="features">
+						<article>
+							<span class="icon solid fa-map"></span>
+							<div class="content">
+								<h3>Address:</h3>
+								<p>Plot No. 6, Narmada Society, Mahesh Nagar, Nagpur 440013, India</p>
+							</div>
+						</article>
+						<article>
+							<span class="icon solid fa-clock"></span>
+							<div class="content">
+								<h3>Business Hours</h3>
+								<p>Monday - Saturday: 10:00 AM - 7:00 PM IST</p>
+							</div>
+						</article>
+						<article>
+							<span class="icon solid fa-envelope"></span>
+							<div class="content">
+								<h3>Email:</h3>
+								<p><a href="mailto:barqconsignment@gmail.com">barqconsignment@gmail.com</a></p>
+							</div>
+						</article>
+						<article>
+							<span class="icon solid fa-phone"></span>
+							<div class="content">
+								<h3>Call Us</h3>
+								<p>Monday - Saturday: 10:00 AM - 7:00 PM IST</p>
+								<ul>
+
+									<!-- Phone -->
+									<li>
+										<a href="tel:+918459680628">+91 8459680628</a>
+									</li>
+									<li>
+										<a href="https://wa.me/918459680628">
+											<span class="label">WhatsApp +91 8459680628</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</article>
+					</div>
+					<hr class="major" />
+					<!-- drop this into your static page where your form goes -->
+					<form id="contactForm" method="post" action="#">
+						<div class="row gtr-uniform">
+							<div class="col-6 col-12-xsmall">
+								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+							</div>
+							<div class="col-6 col-12-xsmall">
+								<input type="tel" name="demo-mobile" id="demo-mobile" value=""
+									placeholder="Mobile Number" />
+							</div>
+
+							<div class="col-12">
+								<textarea name="demo-message" id="demo-message" placeholder="Enter your message"
+									rows="6"></textarea>
+							</div>
+
+							<div class="col-12">
+								<ul class="actions">
+									<li><input type="submit" id="sendBtn" value="Send Message" class="primary" /></li>
+									<li><input type="reset" id="resetBtn" value="Reset" /></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+
+					<script>
+						(function () {
+							const form = document.getElementById('contactForm');
+
+							// Put your WhatsApp number here in international format WITHOUT plus sign or spaces.
+							// For India: country code 91 then the number (example: 918459680628).
+							const whatsappNumber = '918459680628';
+
+							form.addEventListener('submit', function (e) {
+								e.preventDefault(); // stop normal form submit
+
+								// Read values (no validation per your request)
+								const name = document.getElementById('demo-name').value || '';
+								const mobile = document.getElementById('demo-mobile').value || '';
+								const message = document.getElementById('demo-message').value || '';
+
+								// Build the text message. You can change the labels/format as you like.
+								const text =
+									'New contact form submission:%0A' + // %0A is newline (we will also use encodeURIComponent)
+									'Name: ' + name + '%0A' +
+									'Mobile: ' + mobile + '%0A' +
+									'Message: ' + message;
+
+								// Build wa.me URL with encoded text
+								// Use encodeURIComponent for safety (we already used %0A above, but encode again to be safe)
+								const url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(decodeURIComponent(text));
+
+								// Open WhatsApp. On mobile this will open the app, on desktop it will open WhatsApp Web.
+								window.open(url, '_blank');
+
+								// Clear the form after sending
+								form.reset();
+							});
+
+							// Optional: ensure reset button clears values (HTML reset already does this)
+							document.getElementById('resetBtn').addEventListener('click', function () {
+								form.reset();
+							});
+						})();
+					</script>
+
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="index.html">Homepage</a></li>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="service.html">Services</a></li>
+						<li><a href="products.html">Product</a></li>
+						<li><a href="contact.html">Contact Us</a></li>
+				</nav>
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Barq Consign Pvt. Ltd.</h2>
+					</header>
+					<div class="mini-posts">
+						<article>
+							<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+							<p>Ethnic Wear Garments</p>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+							<p>Imitation Jewelry</p>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+							<p>Goat Meat (Mutton)</p>
+						</article>
+					</div>
+					<ul class="actions">
+						<li><a href="#" class="button">More</a></li>
+					</ul>
+				</section>
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Get in touch</h2>
+					</header>
+					<p>We are here to support you with any import export requirement, business inquiry, pricing details,
+						or partnership opportunity. Connect with us and our team will respond within 24 hours.</p>
+					<ul class="contact">
+						<!-- Email -->
+						<li class="icon solid fa-envelope">
+							<a href="mailto:barqconsignment@gmail.com">barqconsignment@gmail.com</a>
+						</li>
+
+						<!-- Phone -->
+						<li class="icon solid fa-phone">
+							<a href="tel:+918459680628">+91 8459680628</a>
+						</li>
+
+						<!-- Address -->
+						<li class="icon solid fa-home">
+							<a href="https://www.google.com/maps/search/?api=1&query=Plot+No.+6,+Narmada+Society,+Mahesh+Nagar,+Nagpur+440013,+Maharashtra,+India"
+								target="_blank">
+								Plot No. 6, Narmada Society, Mahesh Nagar,<br />
+								Nagpur 440013, Maharashtra, India
+							</a>
+						</li>
+					</ul>
+
+				</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; All rights reserved.</p>
+				</footer>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
